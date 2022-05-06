@@ -5,39 +5,31 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner dangNhap = new Scanner(System.in);
         QuanLyPhim quanLyPhim = new QuanLyPhim();
         QuanLyPhongChieuPhim quanLyPhongChieuPhim = new QuanLyPhongChieuPhim();
         int choice = -1;
-        while (choice!=0){
-            System.out.println("Menu");
-            System.out.println("1. Đăng Nhập");
-            System.out.println("2. Đăng Ký");
-            System.out.println("Nhập vào lựa chọn");
-            choice=scanner.nextInt();
-            switch (choice){
-                case 1:
-                    System.out.println("Đăng Nhập");
-                    break;
-                case 2:
-                    System.out.println("Đăng Ký");
-                    System.out.println("Nhập Thông Tin");
-                    int id = scanner.nextInt();
-                    scanner.nextLine();
+        while (choice != 0) {
+//            System.out.println(" Yêu cầu đăng nhập ");
+//            choice = dangNhap.nextInt();
 
-                    System.out.println("Tên Đăng Nhập");
-                    String tenDangNhap = scanner.nextLine();
+            System.out.println(" Tên đăng nhập");
+            String taiKhoan = dangNhap.nextLine();
 
-                    System.out.println("Mật Khẩu");
-                    String matKhau = scanner.nextLine();
+            System.out.println(" Mật Khẩu");
+            String matKhau = dangNhap.nextLine();
 
-                    break;
-                case 0:
-                    System.out.println("Tạm Biệt");
-                    break;
+            if (taiKhoan.equals(taiKhoan) && matKhau.equals(matKhau)) {
+
+                if (taiKhoan.equals("Song") && (matKhau.equals("52Hz"))) {
+                    System.out.println(" Đăng nhập thành công ");
+
+                } else {
+                    System.out.println(" Nhập lại Tài Khoản hoặc Mật Khẩu ");
+                }
+
             }
-            System.out.println("===========================================================================================================================================");
-
         }
     }
 }
+
